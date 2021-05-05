@@ -1,0 +1,74 @@
+@font-face {
+    font-family: 'Ubuntu';
+    src: url('Ubuntu-Bold.woff2') format('woff2'),
+        url('Ubuntu-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Ubuntu';
+    src: url('Ubuntu-Regular.woff2') format('woff2'),
+        url('Ubuntu-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+body{
+    background-color: dodgerblue;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.input{
+    width: 600px;
+    height: 30px;
+    display: block;
+    border-radius: 3px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    padding: 20px;
+    border: 0;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.list{
+    width: 97%;
+    border-radius: 20px;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    padding: 10px 20px 20px 20px;
+    /* background-color: red; */
+    display: flex;
+    /* align-items: center; */
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+li{
+    width: 300px;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    margin-top: 20px;
+    padding: 5px;
+    background: #355C7D;
+    color: white;
+    background: -webkit-linear-gradient(to right, #C06C84, #6C5B7B, #355C7D);
+    background: linear-gradient(to right, #C06C84, #6C5B7B, #355C7D);
+}
+
+.test{
+    margin-left: auto;
+}
+
+span{
+    font-weight: bold;
+}
+
+p{
+    margin: 0;
+}

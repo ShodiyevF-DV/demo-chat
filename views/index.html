@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>great app</title>
+    <link rel="stylesheet" href="/main.css">
+</head>
+<body>
+
+    <input class="input" type="text" placeholder="Message...">
+
+    <ul class="list"></ul>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.min.js"></script>
+<script type="text/javascript">
+
+    const username_value = prompt('ismingizni kiriting')
+
+    console.log(username_value);
+
+    const input = document.querySelector('.input')
+    const list = document.querySelector('.list')
+    const socket = io()
+
+    // socket.on('connect', () => {
+
+        console.log('OK');
+
+        socket.on('user_join', () => {
+
+            console.log('Kimdir serverga kirdi!', Math.random());
+        })
+
+        socket.on('new_message', data => {
+            const elementLi = document.createElement('li')
+            const elementSpan = document.createElement('span')
+            const elementP = document.createElement('p')
+
+            elementSpan.textContent = data.username;
+            elementP.textContent = data.content;
+
+            elementLi.appendChild(elementSpan)
+            elementLi.appendChild(elementP)
+
+            list.appendChild(elementLi)
+            
+        })
+        
+    // })
+
+    input.onkeyup = e => {
+
+        if (e.keyCode === 13) {
+
+            socket.emit('send_message', {
+                username: username_value,
+                content: e.currentTarget.value,
+            })
+
+            const elementLi = document.createElement('li')
+            const elementSpan = document.createElement('span')
+            const elementP = document.createElement('p')
+
+            elementLi.classList.add('test')
+
+            elementSpan.textContent = username_value;
+            elementP.textContent = e.currentTarget.value;
+
+            elementLi.appendChild(elementSpan)
+            elementLi.appendChild(elementP)
+
+            list.appendChild(elementLi)
+
+            input.value = ''
+        }
+    }
+
+    // input.onkeyUp = e => {
+        
+    //     if (e.keyCode === 13) {
+
+    //         console.log('asd');
+
+    //         socket.emit('send_message', {
+    //             username: username_value,
+    //             content: e.currentTarget.value,
+    //         })
+
+    //         const elementSpan = document.createElement('span')
+    //         const elementLi = document.createElement('li')
+    //         const elementDiv = document.createElement('div')
+
+    //         elementSpan.textContent = username_value;
+    //         elementLi.textContent = e.currentTarget.value;
+
+    //         elementDiv.appendChild(elementSpan)
+    //         elementDiv.appendChild(elementli)
+
+    //         list.appendChild(elementDiv)
+            
+    //     }
+    // }
+        
+</script>
+    
+</body>
+</html>
