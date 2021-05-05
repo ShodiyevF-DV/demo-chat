@@ -11,6 +11,8 @@ app.use(express.static('views'))
 const server = http.createServer(app)
 const io = socket(server)
 
+const port = process.env.PORT || 4000;
+
 app.get('/', (req, res) => res.render('index'))
 
 io.on('connection', client => {
@@ -23,4 +25,4 @@ io.on('connection', client => {
     })
 })
 
-server.listen(process.env.POST || 4000, () => console.log('helo'))
+server.listen(port, () => console.log(`Listening on ${port}`))
