@@ -28,7 +28,6 @@ body{
     height: 100vh;
     display: flex;
     flex-direction: column;
-    background-color: blue;
 }
 
 .input{
@@ -46,13 +45,11 @@ body{
 
 .list-wrapper{
     width: 100%;
-    background-color: white;
 }
 
 .list{
     width: 97.4%;
     height: 87.7vh;
-    background-color: red;
     list-style-type: none;
     padding: 0;
     margin: 0;
@@ -101,6 +98,25 @@ p{
     margin: 0;
 }
 
+@media only screen and (max-width: 780px) {
+    
+    body{
+        overflow: hidden;
+    }
+    
+    .list{
+        height: 90vh;
+        /* background-color: blue; */
+    }
+
+    .input{
+        margin: 0;
+        margin-top: auto;   
+        /* background-color: blue; */
+    }
+    
+}
+
 @media only screen and (min-width: 2555px) {
     
     .list{
@@ -110,21 +126,6 @@ p{
     .input{
         margin: 0;
         margin-top: auto;   
-    }
-    
-}
-
-@media only screen and (max-width: 780) {
-    
-    .list{
-        height: 93vh;
-        background-color: blue;
-    }
-
-    .input{
-        margin: 0;
-        margin-top: auto;   
-        background-color: blue;
     }
     
 }
