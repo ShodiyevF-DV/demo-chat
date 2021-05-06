@@ -74,8 +74,10 @@ body{
 }
 
 li{
-    width: 300px;
-    text-align: center;
+    width: auto;
+    min-width: 100px;
+    /* max-width: 100px; */
+    text-align: left;
     padding: 0;
     margin: 0;
     margin-top: 20px;
@@ -121,7 +123,6 @@ p{
     .input{
         margin: 0;
         margin-top: auto;
-        background-color: red;
     }
     
 }
@@ -138,7 +139,7 @@ p{
     }
     
     .list{
-        height: 90.2vh;
+        height: 89.3vh;
     }
 
     .input{
