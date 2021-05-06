@@ -30,31 +30,20 @@
     const list = document.querySelector('.list')
     const socket = io()
 
-    // socket.on('connect', () => {
+    socket.on('new_message', data => {
+        const elementLi = document.createElement('li')
+        const elementSpan = document.createElement('span')
+        const elementP = document.createElement('p')
 
-        console.log('OK');
+        elementSpan.textContent = data.username;
+        elementP.textContent = data.content;
 
-        socket.on('user_join', () => {
+        elementLi.appendChild(elementSpan)
+        elementLi.appendChild(elementP)
 
-            console.log('Kimdir serverga kirdi!', Math.random());
-        })
-
-        socket.on('new_message', data => {
-            const elementLi = document.createElement('li')
-            const elementSpan = document.createElement('span')
-            const elementP = document.createElement('p')
-
-            elementSpan.textContent = data.username;
-            elementP.textContent = data.content;
-
-            elementLi.appendChild(elementSpan)
-            elementLi.appendChild(elementP)
-
-            list.appendChild(elementLi)
-            
-        })
+        list.appendChild(elementLi)
         
-    // })
+    })
 
     input.onkeyup = e => {
 
@@ -71,43 +60,21 @@
 
             elementLi.classList.add('test')
 
-            elementSpan.textContent = username_value;
-            elementP.textContent = e.currentTarget.value;
-
-            elementLi.appendChild(elementSpan)
-            elementLi.appendChild(elementP)
-
-            list.appendChild(elementLi)
+            if (e.currentTarget.value === '') {
+                
+            } else {
+                elementSpan.textContent = username_value;
+                elementP.textContent = e.currentTarget.value;
+                
+                elementLi.appendChild(elementSpan)
+                elementLi.appendChild(elementP)
+                
+                list.appendChild(elementLi)
+            }
 
             input.value = ''
         }
     }
-
-    // input.onkeyUp = e => {
-        
-    //     if (e.keyCode === 13) {
-
-    //         console.log('asd');
-
-    //         socket.emit('send_message', {
-    //             username: username_value,
-    //             content: e.currentTarget.value,
-    //         })
-
-    //         const elementSpan = document.createElement('span')
-    //         const elementLi = document.createElement('li')
-    //         const elementDiv = document.createElement('div')
-
-    //         elementSpan.textContent = username_value;
-    //         elementLi.textContent = e.currentTarget.value;
-
-    //         elementDiv.appendChild(elementSpan)
-    //         elementDiv.appendChild(elementli)
-
-    //         list.appendChild(elementDiv)
-            
-    //     }
-    // }
         
 </script>
     
