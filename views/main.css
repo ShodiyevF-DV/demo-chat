@@ -102,6 +102,7 @@ p{
     
     body{
         overflow: hidden;
+        height: 550px;
     }
     
     .list{
