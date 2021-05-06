@@ -104,16 +104,19 @@ p{
         overflow: hidden;
         height: 550px;
     }
+
+    .big-wrapper{
+        height: 83vh;
+    }
     
     .list{
-        height: 90vh;
-        /* background-color: blue; */
+        height: 69.9vh;
     }
 
     .input{
         margin: 0;
-        margin-top: auto;   
-        /* background-color: blue; */
+        margin-top: auto;
+        margin-bottom: 83px;
     }
     
 }
