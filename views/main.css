@@ -75,13 +75,12 @@ body{
 
 li{
     width: auto;
-    min-width: 100px;
-    /* max-width: 100px; */
+    min-width: 60px;
     text-align: left;
     padding: 0;
     margin: 0;
     margin-top: 20px;
-    padding: 5px;
+    padding: 10px;
     background: #355C7D;
     color: white;
     background: -webkit-linear-gradient(to right, #C06C84, #6C5B7B, #355C7D);
@@ -92,12 +91,44 @@ li{
     margin-left: auto;
 }
 
+.added_li{
+    margin-right: auto;
+    
+}
+
+.text-span{
+    
+    display: flex;
+    justify-content: center;
+}
+
 span{
     font-weight: bold;
 }
 
+.text-time-wrapper{
+    width: auto;
+    /* min-width: 60px; */
+    margin-top: 5px;
+    display: flex;
+    align-items: flex-end;
+    margin-left: auto;
+    justify-content: flex-end;
+}
+
+.no_user{
+    margin-top: -5px;
+}
+
 p{
     margin: 0;
+    /* margin-right: 5px; */
+    /* margin-left: auto; */
+}
+
+.time{
+    font-size: 10px;
+    margin-left: 10px;
 }
 
 @media only screen and (min-width: 319px) {
