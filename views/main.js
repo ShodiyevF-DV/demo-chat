@@ -123,10 +123,6 @@ input.onkeyup = e => {
             elementTime.appendChild(elementTimeSpan)
 
             list.appendChild(elementLi)
-
-            const notificationSound = new Audio('Notification.mp3')
-
-            notificationSound.play();
             
         }
 
