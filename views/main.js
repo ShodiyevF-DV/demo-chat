@@ -71,8 +71,6 @@ socket.on('new_message', data => {
     const notificationSound = new Audio('Notification.mp3')
 
     notificationSound.play();
-
-    input.value = ''
     scrollDown()
 
 })
