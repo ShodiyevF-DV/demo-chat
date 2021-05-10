@@ -192,7 +192,7 @@ p{
     }
     
     .list{
-        height: 90.3vh;
+        height: 91.8vh;
     }
 
     .input{
@@ -221,7 +221,6 @@ p{
     .input{
         margin: 0;
         margin-top: auto;
-        background-color: red;
     }
     
 }
@@ -229,6 +228,12 @@ p{
 @media only screen and (min-width: 1020px) {
     .list{
         height: 88vh;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    .list{
+        height: 89vh;
     }
 }
 
